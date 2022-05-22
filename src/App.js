@@ -1,11 +1,28 @@
 import React from 'react';
+import './App.css';
 
 function App() {
-  // const username = undefined;
-  const username = undefined;
-  // return username || '빈값입니다.'; 이런식으로 랜더링해야 한다.
+  const name = '리액트';
 
-  /* jsx 안에서는 undefined 랜더링 가능 */
-  return <div>{username} </div>;
+  const style = {
+    background: 'black',
+    color: 'aqua',
+    fontSize: '32px', // font-size → fontSize
+    fontWeight: 'bold', //font-weight → fontWeight
+    padding: 16, // 단위를 생략하면 px로 지정됨
+  };
+  return (
+    <div>
+      <h1 style={style}>{name}</h1>
+      <nav>
+        <ul className="menu">
+          <li className="item">HTML</li>
+          <li className="item">CSS</li>
+          <li className="item">JavaScript</li>
+          <li className="item">React</li>
+        </ul>
+      </nav>
+    </div>
+  );
 }
 export default App;
