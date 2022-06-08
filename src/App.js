@@ -1,14 +1,10 @@
 import React from 'react';
-import Button from './Button';
-import Hello from './Hello';
+import Say from './Say';
 
 function App() {
   return (
     <div>
-      <Hello />
-      <Button>
-        <span>버튼</span>
-      </Button>
+      <Say />
     </div>
   );
 }
