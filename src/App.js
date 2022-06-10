@@ -1,10 +1,11 @@
 import React from 'react';
-import Say from './Say';
+import Counter from './Counter';
 
 function App() {
   return (
     <div>
-      <Say />
+      <h1>카운터 예제</h1>
+      <Counter />
     </div>
   );
 }
