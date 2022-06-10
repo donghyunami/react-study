@@ -1,11 +1,11 @@
 import React from 'react';
-import Counter from './Counter';
+import InputSample from './InputSample';
 
 function App() {
   return (
     <div>
-      <h1>카운터 예제</h1>
-      <Counter />
+      <h1>리액트에서 input 사용하기</h1>
+      <InputSample />
     </div>
   );
 }
