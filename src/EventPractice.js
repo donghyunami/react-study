@@ -11,8 +11,8 @@ function EventPractice() {
   const handleChange = e => {
     const { name, value } = e.target; //비구조화 할당을 통해 값 추출
     setInput({
-      ...input,
-      [name]: value,
+      ...input, // 기존 상태 값을 복사한 뒤
+      [name]: value, // 원하는 값을 덮어 씌우기
     });
   };
 
