@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import UserList from './UserList';
+import UserList from './components/UserList';
 
 function App() {
   const users = [
