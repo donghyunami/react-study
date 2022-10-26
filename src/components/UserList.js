@@ -1,24 +1,47 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-function User({ user, onRemove, onEdit }) {
-  const handleEdit = e => {
-    const editContext = window.prompt('수정할 이름을 입력하세요');
-    onEdit(editContext, user.id);
-  };
+function User({ user, onRemove, onToggle }) {
+  useEffect(() => {
+    console.log('컴포넌트가 화면에 나타남');
+    //state를 변경될 때에는 실행되지 않음
+    // props → state 
+    // REST API
+    // D3 Video.js
+    // setInterval, setTimeout
+    return () => {
+      console.log('컴포넌트가 화면에서 사라짐');
+            // clearInterval, clearTimeout
+      // 라이브러리 인스턴스 제거
+    };
+  }, []);
   return (
     <div>
-      <b>{user.username}</b> <span>({user.email})</span>
-      <button onClick={handleEdit}>수정</button>
+      <b
+        style={{
+          cursor: 'pointer',
+          color: user.active ? 'green' : 'black'
+        }}
+        onClick={() => onToggle(user.id)}
+      >
+        {user.username}
+      </b>
+      &nbsp;
+      <span>({user.email})</span>
       <button onClick={() => onRemove(user.id)}>삭제</button>
     </div>
   );
 }
 
-function UserList({ users, onRemove, onEdit }) {
+function UserList({ users, onRemove, onToggle }) {
   return (
     <div>
       {users.map(user => (
-        <User user={user} key={user.id} onRemove={onRemove} onEdit={onEdit} />
+        <User
+          user={user}
+          key={user.id}
+          onRemove={onRemove}
+          onToggle={onToggle}
+        />
       ))}
     </div>
   );
