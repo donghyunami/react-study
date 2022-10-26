@@ -1,7 +1,28 @@
 .App {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 30px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  border: 2px solid lightgray;
+  padding: 20px 18px;
+}
+.item {
+  padding: 8px;
+  background: goldenrod;
+  margin-left: 15px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 3px;
+}
+
+.item:hover {
+  opacity: 0.8;
 }
